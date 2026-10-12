@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar usuário</title>
+
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}"
+>
+
+</head>
+
+<body>
+
+<main class="pagina-cadastro">
+
+    <section class="cadastro-card">
+
+        <div class="cadastro-icone">
+            👤
+        </div>
+
+        <h1>Cadastrar usuário</h1>
+
+        <p class="cadastro-descricao">
+            Crie uma nova conta para acessar o sistema.
+        </p>
+
+        <form method="POST">
+
+            <label for="usuario">
+                Nome de usuário
+            </label>
+
+            <input
+                type="text"
+                id="usuario"
+                name="usuario"
+                placeholder="Digite o nome de usuário"
+                required
+            >
+
+            <label for="senha">
+                Senha
+            </label>
+
+            <input
+                type="password"
+                id="senha"
+                name="senha"
+                placeholder="Digite a senha"
+                required
+            >
+
+            <label for="perfil">
+                Perfil
+            </label>
+
+            <select id="perfil" name="perfil" required>
+                <option value="usuario">Usuário comum</option>
+                <option value="tecnico">Técnico</option>
+            </select>
+
+            <button type="submit">
+                Cadastrar usuário
+            </button>
+
+        </form>
+
+        <a href="{{ url_for('tecnico') }}" class="voltar-link">
+            ← Voltar para o painel
+        </a>
+
+    </section>
+
+</main>
+
+</body>
+</html>

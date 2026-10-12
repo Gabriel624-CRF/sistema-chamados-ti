@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Área do Técnico - Sistema de Chamados</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="dashboard tecnico-dashboard">
+
+    <header class="topbar tecnico-topbar">
+
+        <div>
+            <h1>Central de Suporte TI</h1>
+            <p>Painel do técnico</p>
+        </div>
+
+        <div class="usuario-info">
+            <span>🧑‍💻 {{ usuario }}</span>
+            <a href="{{ url_for('logout') }}">Sair</a>
+        </div>
+
+    </header>
+
+
+    <main class="dashboard-container">
+
+        <section class="welcome tecnico-welcome">
+
+            <span class="badge tecnico-badge">TÉCNICO</span>
+
+            <h2>Painel de atendimento 🛠️</h2>
+
+            <p>
+                Gerencie os chamados, acompanhe os atendimentos
+                e mantenha o suporte organizado.
+            </p>
+
+        </section>
+
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <strong>08</strong>
+                <span>Pendentes</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>03</strong>
+                <span>Em atendimento</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>12</strong>
+                <span>Resolvidos</span>
+            </div>
+
+        </section>
+
+
+        <section class="menu-grid tecnico-grid">
+
+            <div class="menu-card cyan">
+                <span class="numero">1</span>
+
+                <div>
+                    <h3>Chamados pendentes</h3>
+                    <p>Visualize os chamados aguardando atendimento.</p>
+                </div>
+            </div>
+
+
+            <div class="menu-card green">
+                <span class="numero">2</span>
+
+                <div>
+                    <h3>Assumir chamado</h3>
+                    <p>Escolha um chamado para iniciar o atendimento.</p>
+                </div>
+            </div>
+
+
+            <div class="menu-card blue">
+                <span class="numero">3</span>
+
+                <div>
+                    <h3>Em atendimento</h3>
+                    <p>Veja os chamados que estão sendo resolvidos.</p>
+                </div>
+            </div>
+
+
+            <div class="menu-card orange">
+                <span class="numero">4</span>
+
+                <div>
+                    <h3>Atualizar chamado</h3>
+                    <p>Registre informações e alterações do atendimento.</p>
+                </div>
+            </div>
+
+
+            <div class="menu-card red">
+                <span class="numero">5</span>
+
+                <div>
+                    <h3>Encerrar chamado</h3>
+                    <p>Finalize um chamado que já foi solucionado.</p>
+                </div>
+            </div>
+
+
+            <div class="menu-card purple">
+                <span class="numero">6</span>
+
+                <div>
+                    <h3>Histórico</h3>
+                    <p>Consulte os atendimentos já realizados.</p>
+                </div>
+            </div>
+
+            <div class="menu-card cyan">
+    <span class="numero">7</span>
+
+    <div>
+        <h3>Cadastrar usuário</h3>
+        <p>Crie uma nova conta para usuários do sistema.</p>
+    </div>
+</div>
+
+        </section>
+
+
+        <section class="command-box tecnico-command">
+
+            <h3>Digite o número da opção</h3>
+
+            <form method="POST">
+
+                <input
+                    type="number"
+                    name="opcao"
+                    min="1"
+                    max="7"
+                    placeholder="Ex.: 1"
+                    required
+                >
+
+                <button type="submit">
+                    Continuar
+                </button>
+
+            </form>
+
+            {% if mensagem %}
+                <div class="message">
+                    {{ mensagem }}
+                </div>
+            {% endif %}
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

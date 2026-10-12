@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Abrir chamado</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+</head>
+
+<body>
+
+    <main class="pagina-chamados">
+
+        <section class="chamados-container">
+
+            <header class="chamados-header">
+
+                <div class="chamados-brilho">
+                    ✦
+                </div>
+
+                <p class="chamados-subtitulo">
+                    CENTRAL DE ATENDIMENTO
+                </p>
+
+                <h1>
+                    Abrir chamado
+                </h1>
+
+                <p class="chamados-descricao">
+                    Descreva o problema para que nossa equipe técnica possa ajudar.
+                </p>
+
+            </header>
+
+
+            <section class="cadastro-card">
+
+                <form method="POST">
+
+                    <label for="titulo">
+                        Título do chamado
+                    </label>
+
+                    <input
+                        type="text"
+                        id="titulo"
+                        name="titulo"
+                        placeholder="Ex.: Computador não liga"
+                        required
+                    >
+
+
+                    <label for="descricao">
+                        Descrição do problema
+                    </label>
+
+                    <textarea
+                        id="descricao"
+                        name="descricao"
+                        rows="6"
+                        placeholder="Explique o que está acontecendo..."
+                        required
+                    ></textarea>
+
+
+                    <label for="prioridade">
+                        Prioridade
+                    </label>
+
+                    <select
+                        id="prioridade"
+                        name="prioridade"
+                        required
+                    >
+                        <option value="">Selecione a prioridade</option>
+                        <option value="alta">🔴 Alta</option>
+                        <option value="media">🟡 Média</option>
+                        <option value="baixa">🟢 Baixa</option>
+                    </select>
+
+
+                    <button type="submit">
+                        Abrir chamado
+                    </button>
+
+                </form>
+
+                <a
+                    href="{{ url_for('usuario') }}"
+                    class="voltar-chamados"
+                >
+                    ← Voltar para o painel
+                </a>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

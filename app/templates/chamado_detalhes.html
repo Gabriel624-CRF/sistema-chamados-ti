@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detalhes do chamado</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+</head>
+
+<body>
+
+    <main class="pagina-chamados">
+
+        <section class="chamados-container">
+
+            <header class="chamados-header">
+
+                <div class="chamados-brilho">
+                    ✦
+                </div>
+
+                <p class="chamados-subtitulo">
+                    CENTRAL DE ATENDIMENTO
+                </p>
+
+                <h1>
+                    ❄️ Detalhes do chamado
+                </h1>
+
+            </header>
+
+
+            <article class="chamado-card prioridade-alta">
+
+                <div class="chamado-topo">
+
+                    <span class="chamado-numero">
+                        #001
+                    </span>
+
+                    <span class="prioridade">
+                        🔴 Alta
+                    </span>
+
+                </div>
+
+                <h2>
+                    Computador não liga
+                </h2>
+
+                <p>
+                    O computador do usuário não está iniciando.
+                </p>
+
+                <div class="chamado-info">
+
+                    <span>
+                        👤 Usuário: João Silva
+                    </span>
+
+                    <span>
+                        📅 Data: 06/10/2026
+                    </span>
+
+                    <span>
+                        📌 Status: Aguardando atendimento
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <a
+                href="{{ url_for('chamados_pendentes') }}"
+                class="voltar-chamados"
+            >
+                ← Voltar para chamados pendentes
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

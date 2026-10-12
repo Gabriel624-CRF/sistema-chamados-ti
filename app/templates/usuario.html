@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Área do Usuário - Sistema de Chamados</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="dashboard usuario-dashboard">
+
+    <header class="topbar">
+        <div>
+            <h1>Sistema de Chamados de TI</h1>
+            <p>Área do usuário</p>
+        </div>
+
+        <div class="usuario-info">
+            <span>👤 {{ usuario }}</span>
+            <a href="{{ url_for('logout') }}">Sair</a>
+        </div>
+    </header>
+
+
+    <main class="dashboard-container">
+
+        <section class="welcome">
+            <span class="badge usuario-badge">USUÁRIO</span>
+
+            <h2>Olá, {{ usuario }}! 👋</h2>
+
+            <p>
+                O que você deseja fazer?
+                Escolha uma opção abaixo ou digite o número correspondente.
+            </p>
+        </section>
+
+
+        <section class="menu-grid">
+
+            <div class="menu-card green">
+                <span class="numero">1</span>
+                <div>
+                    <h3>Abrir chamado</h3>
+                    <p>Informe um problema ou solicitação para o suporte.</p>
+                </div>
+            </div>
+
+
+            <div class="menu-card blue">
+                <span class="numero">2</span>
+                <div>
+                    <h3>Meus chamados</h3>
+                    <p>Veja os chamados que você já abriu.</p>
+                </div>
+            </div>
+
+
+            <div class="menu-card purple">
+                <span class="numero">3</span>
+                <div>
+                    <h3>Consultar andamento</h3>
+                    <p>Confira o status de um chamado.</p>
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <section class="command-box">
+
+            <h3>Digite o número da opção</h3>
+
+            <form method="POST">
+
+                <input
+                    type="number"
+                    name="opcao"
+                    min="1"
+                    max="3"
+                    placeholder="Ex.: 1"
+                    required
+                >
+
+                <button type="submit">
+                    Continuar
+                </button>
+
+            </form>
+
+            {% if mensagem %}
+                <div class="message">
+                    {{ mensagem }}
+                </div>
+            {% endif %}
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

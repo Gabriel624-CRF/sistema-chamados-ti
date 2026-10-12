@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Sistema de Chamados de TI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="pagina">
+
+        <div class="lado-esquerdo">
+
+            <h1>Sistema de Chamados de TI</h1>
+
+            <p>Entre para acompanhar e gerenciar seus chamados.</p>
+
+        </div>
+
+        <div class="lado-direito">
+
+            <h2>Login</h2>
+            
+            <p class="login-descricao">
+    Entre com as credenciais fictícias abaixo para testar a demonstração.
+</p>
+
+<div class="credenciais-demo">
+    <strong>👤 Usuário comum</strong><br>
+    Usuário: demo<br>
+    Senha: demo123
+
+    <hr>
+
+    <strong>🛠️ Técnico</strong><br>
+    Usuário: tecnico<br>
+    Senha: tec123
+</div>
+
+<div class="aviso-cadastro">
+    <strong>💡 Quer testar com outro usuário?</strong>
+
+    <p>
+        A conta <strong>tecnico</strong> possui acesso ao cadastro
+        de novos usuários para testes do sistema.
+    </p>
+</div>
+
+<form method="POST" action="/login">
+
+    <label for="usuario">Usuário</label>
+
+    <input
+        type="text"
+        id="usuario"
+        name="usuario"
+        placeholder="Digite seu usuário"
+        required
+    >
+
+    <label for="senha">Senha</label>
+
+    <input
+        type="password"
+        id="senha"
+        name="senha"
+        placeholder="Digite sua senha"
+        required
+    >
+
+    <button type="submit">Entrar</button>
+
+</form>
+
+           {% if mensagem %}
+    <p class="mensagem-login {{ tipo_mensagem }}">
+        {{ mensagem }}
+    </p>
+{% endif %}
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

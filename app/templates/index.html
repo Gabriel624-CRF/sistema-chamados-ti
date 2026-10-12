@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema de Chamados de TI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+   <div class="aviso-overlay">
+
+    <div class="aviso-modal">
+
+        <div class="aviso-emoji">⚠️</div>
+
+        <h2>Aviso importante</h2>
+
+        <span class="ambiente-demo">
+    Ambiente de demonstração — dados fictícios
+        </span>
+
+        <p>
+            Este sistema é um projeto demonstrativo desenvolvido
+            para fins educacionais e de portfólio.
+        </p>
+
+        <p>
+            Não utilize dados pessoais, senhas reais ou informações
+            confidenciais durante os testes.
+        </p>
+
+        <div class="como-testar">
+
+            <h3>🖥️ Como testar</h3>
+
+            <ol>
+                <li>Clique em “Entrar”.</li>
+                <li>Utilize as credenciais fictícias da demonstração.</li>
+                <li>Teste as funcionalidades com dados de exemplo.</li>
+            </ol>
+
+        </div>
+
+        <p class="agradecimento">
+            😊 Obrigado pela compreensão!
+        </p>
+
+        <button onclick="fecharAviso()">
+            Entendi, continuar →
+        </button>
+
+    </div>
+
+</div>
+
+ <div class="pagina">
+
+   <div class="lado-esquerdo">
+
+    <h1>Sistema de Chamados de TI</h1>
+
+    <p>Bem-vindo de volta!</p>
+
+    <p>Gerencie seus chamados de TI de forma simples e organizada.</p>
+
+   </div>
+
+        <div class="lado-direito">
+
+            <h2>Acesso</h2>
+
+            <a href="/login" class="botao">Entrar</a>
+            
+
+        </div>
+
+    </div>
+    
+<script>
+    function fecharAviso() {
+        document.querySelector(".aviso-overlay").style.display = "none";
+    }
+</script>
+
+</body>
+
+
+</html>

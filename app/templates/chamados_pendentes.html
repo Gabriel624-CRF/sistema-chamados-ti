@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chamados pendentes</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+</head>
+
+<body>
+
+    <main class="pagina-chamados">
+
+        <section class="chamados-container">
+
+            <header class="chamados-header">
+
+                <div class="chamados-brilho">
+                    ✦
+                </div>
+
+                <p class="chamados-subtitulo">
+                    CENTRAL DE ATENDIMENTO
+                </p>
+
+                <h1>
+                    ❄️ Chamados pendentes
+                </h1>
+
+                <p class="chamados-descricao">
+                    Chamados aguardando atendimento técnico.
+                </p>
+
+            </header>
+
+
+<section class="lista-chamados">
+
+    <article class="chamado-card prioridade-alta">
+
+        <div class="chamado-topo">
+
+            <span class="chamado-numero">
+                #001
+            </span>
+
+            <span class="prioridade">
+                🔴 Alta
+            </span>
+
+        </div>
+
+        <h2>
+            Computador não liga
+        </h2>
+
+        <p>
+            O computador do usuário não está iniciando.
+        </p>
+
+        <div class="chamado-info">
+
+            <span>
+                👤 João Silva
+            </span>
+
+            <span>
+                📅 06/10/2026
+            </span>
+
+        </div>
+
+        <a
+    href="{{ url_for('chamado_detalhes') }}"
+    class="ver-detalhes"
+>
+    Ver detalhes →
+</a>
+
+</article>
+</article>
+
+
+<article class="chamado-card prioridade-media">
+
+    <div class="chamado-topo">
+
+        <span class="chamado-numero">
+            #002
+        </span>
+
+        <span class="prioridade">
+            🟡 Média
+        </span>
+
+    </div>
+
+    <h2>
+        Erro no sistema
+    </h2>
+
+    <p>
+        O sistema apresenta uma mensagem de erro ao abrir.
+    </p>
+
+    <div class="chamado-info">
+
+        <span>
+            👤 Maria Souza
+        </span>
+
+        <span>
+            📅 06/10/2026
+        </span>
+
+    </div>
+
+    <a
+        href="{{ url_for('chamado_detalhes') }}"
+        class="ver-detalhes"
+    >
+        Ver detalhes →
+    </a>
+
+</article>
+
+<article class="chamado-card prioridade-baixa">
+
+    <div class="chamado-topo">
+
+        <span class="chamado-numero">
+            #003
+        </span>
+
+        <span class="prioridade">
+            🟢 Baixa
+        </span>
+
+    </div>
+
+    <h2>
+        Instalação de programa
+    </h2>
+
+    <p>
+        Usuário solicita a instalação de um novo programa.
+    </p>
+
+    <div class="chamado-info">
+
+        <span>
+            👤 Carlos Oliveira
+        </span>
+
+        <span>
+            📅 06/10/2026
+        </span>
+
+    </div>
+
+    <a
+        href="{{ url_for('chamado_detalhes') }}"
+        class="ver-detalhes"
+    >
+        Ver detalhes →
+    </a>
+
+</article>
+</section>
+</section>
+
+            
+
+
+            <a
+                href="{{ url_for('tecnico') }}"
+                class="voltar-chamados"
+            >
+                ← Voltar para o painel
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
